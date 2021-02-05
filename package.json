@@ -9,7 +9,6 @@
 	},
 	"author": "rediska1114@gmail.com",
 	"license": "ISC",
-	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^26.0.20",
 		"husky": "^4.3.8",
@@ -27,5 +26,9 @@
 			"prettier --write",
 			"git add"
 		]
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"url-join": "^4.0.1"
 	}
 }
