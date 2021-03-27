@@ -34,11 +34,13 @@ class Config {
 		this.tag = getTag(DRONE_SOURCE_BRANCH)
 		this.authors = JSON.parse(PLUGIN_AUTHORS)
 
-		this.link = envsubst(PLUGIN_LINK, {
-			...this.meta,
-			tag: this.tag,
-			branch: url_escape(this.meta.branch),
-		})
+		this.link = PLUGIN_LINK
+			? envsubst(PLUGIN_LINK, {
+					...this.meta,
+					tag: this.tag,
+					branch: url_escape(this.meta.branch),
+			  })
+			: undefined
 	}
 }
 
