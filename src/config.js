@@ -32,7 +32,7 @@ class Config {
 			author: DRONE_COMMIT_AUTHOR,
 		}
 		this.tag = getTag(DRONE_SOURCE_BRANCH)
-		this.authors = JSON.parse(PLUGIN_AUTHORS)
+		this.authors = PLUGIN_AUTHORS ? JSON.parse(PLUGIN_AUTHORS) : {}
 
 		this.link = PLUGIN_LINK
 			? envsubst(PLUGIN_LINK, {
